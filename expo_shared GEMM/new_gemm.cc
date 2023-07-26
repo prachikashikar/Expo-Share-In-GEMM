@@ -3,6 +3,7 @@
 
 #include "./new_gemm.h"
 
+// Float as a combination of sign, exponent and mantissa
 union MyUnion
 {
 	float f;
@@ -37,7 +38,7 @@ void gemm(ap_uint<1> aSign[M][N], ap_uint<2> aInd[M][N],
 			{
                 #pragma HLS pipeline
 
-
+// Retrieve floats 
 				tempA.raw.sign = aSign[m][n];
 				tempA.raw.exponent = aList[aInd[m][n]];
 				tempA.raw.mantissa = aMant[m][n];
