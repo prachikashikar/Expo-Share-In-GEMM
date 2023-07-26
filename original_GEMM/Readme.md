@@ -1,1 +1,1 @@
-This is a code for a generelised matric multiplication (GEMM). 
+This is a code for a generelized matric multiplication (GEMM) using HLS. 
